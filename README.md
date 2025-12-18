@@ -1,8 +1,8 @@
-**Log Classification With Hybrid Classification Framework**
+# Log Classification With Hybrid Classification Framework
 
 This project implements a hybrid log classification system, combining three complementary approaches to handle varying levels of complexity in log patterns. The classification methods ensure flexibility and effectiveness in processing predictable, complex, and poorly-labeled data patterns.
 
-Classification Approaches
+## Classification Approaches
 
 1. Regular Expression (Regex):
 Handles the most simplified and predictable patterns.

@@ -20,12 +20,15 @@ Provides a fallback or complementary approach to the other methods.
 
 # Folder Structure
 
-1. models/:
-    Stores the saved models, including Sentence Transformer embeddings and the Logistic Regression model.
+1. `models/`:
+- Stores the saved models, including Sentence Transformer embeddings and the Logistic Regression model.
 
-2. processor/:
-    classification types
+2. `processor/`:
+- Classification types
 
-3. training/
-    1. Contains the code for training models using Sentence Transformer and Logistic Regression.
-    2. Includes the code for regex-based classification.
+3. `resources/`:
+- This folder contains resource files such as test CSV files, output files, images, etc.
+
+4. `training/`
+- Contains the code for training models using Sentence Transformer and Logistic Regression.
+- Includes the code for regex-based classification.

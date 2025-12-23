@@ -18,3 +18,28 @@ def classify_log(source, log_msg):
             label = bp.classify_with_bert(log_msg)
     return label
 
+def classify_csv(input_file):
+    import pandas as pd
+    df = pd.read_csv(input_file)
+
+    # Perform classification
+    df["target_label"] = classify(list(zip(df["source"], df["log_message"])))
+
+    # Save the modified file
+    output_file = r"E:\Projects\gen-ai-log-classification\resources\output.csv"
+    df.to_csv(output_file, index=False)
+
+    return output_file
+
+if __name__ == "__main__":
+
+    classify_csv(r"E:\Projects\gen-ai-log-classification\resources\test.csv")
+
+    # test_logs = [
+    #     ("LegacyCRM", "Case escalation for ticket ID 7324 failed because the assigned support agent is no longer active."),
+    #     ("OldSystem", "The 'ReportGenerator' module will be retired in version 4.0. Please migrate to the 'AdvancedAnalyticsSuite' by Dec 2025"),
+    #     ("NewApp", "System reboot initiated by user 12345.")
+    # ]
+    # results = classify(test_logs)
+    # for log, label in zip(test_logs, results):
+    #     print(f"Log: {log[1]}\nClassified as: {label}\n")

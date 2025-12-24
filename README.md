@@ -32,3 +32,5 @@ Provides a fallback or complementary approach to the other methods.
 4. `training/`
     - Contains the code for training models using Sentence Transformer and Logistic Regression.
     - Includes the code for regex-based classification.
+
+![alt text](resources/ImageDec.png)
